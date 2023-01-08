@@ -17,7 +17,7 @@
   }
 
   body {
-    font-family: 'Courier', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     color: rgb(195, 220, 246);
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@
     border: none;
     border-radius: 5px;
     font-size: 0.8em;
-    font-family: 'Courier', monospace;
+    font-family: 'Courier Prime', monospace;
     height: auto;
     margin: 0 0 30px 0;
     outline: 0;
@@ -111,8 +111,11 @@
     background-color: #fcefd9;
   }
   
-  input:focus {
+  input:focus,
+  textarea:focus,
+  select:focus {
     border: 2px solid black;
+    background-color:rgb(220, 193, 245);
   }
 
   input:hover {
@@ -123,7 +126,7 @@
   input[placeholder="Required"] {
     text-align: right;
     font-style: italic;
-    font-family: 'Courier', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
   }
   
   input[placeholder="Required"]:focus {
@@ -146,7 +149,7 @@
     color: #FFF;
     background: linear-gradient(360deg, transparent 1%, #4cf5fb);
     font-size: 18px;
-    font-family: 'Courier', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     text-align: center;
     border-radius: 5px;
     width: 100%;
