@@ -5,22 +5,23 @@
   }
   
   .banner {
-    background: black;
+    background: linear-gradient(360deg, transparent 2%, rgb(151, 248, 224));
   }
 
   .banner h1 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin: 0 0 30px 0;
     padding: 20px;
     color: white;
   }
 
   body {
-    font-family: 'Merriweather', sans-serif;
-    color: #384047;
+    font-family: 'Courier', sans-serif;
+    color: rgb(195, 220, 246);
     margin: 0;
     padding: 0;
+    background: url("image/background.jpg") fixed;
   }
 
   hr.thick {
@@ -38,6 +39,7 @@
     max-width: 300px;
     margin: auto;
     border-radius: 8px;
+    font-size: 1.3em;
   }
 
   .checkbox-group,
@@ -48,23 +50,28 @@
 
   h2 {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
     width: 100%;
   }
 
   p.signup-caption {
     text-align: center;
-    color: gray;
-    font-size: 0.8em;
+    color: rgb(168, 253, 232);
+    font-style: italic;
+    font-size: .8em;
     margin-bottom: 48px;
+    background:linear-gradient(to right, transparent 1%,black);
+    backdrop-filter: blur(3px);
   }
 
   p.copyright {
     text-align: center;
-    color: gray;
+    color: rgb(168, 253, 232);
     font-style: italic;
     font-size: 0.8em;
     margin-bottom: 48px;
+    background:linear-gradient(to right, transparent 1%,black);
+    backdrop-filter: blur(3px);
   }
 
   input[type="text"],
@@ -75,37 +82,48 @@
     background: rgba(255,255,255,0.1);
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 0.8em;
+    font-family: 'Courier', monospace;
     height: auto;
     margin: 0 0 30px 0;
     outline: 0;
     padding: 15px;
     width: 100%;
-    background-color: #e8eeef;
-    color: #8a97a0;
+    background-color: #fcefd9;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   }
   
   textarea {
-    padding: 0;
+    padding: 10px;
     margin: 0 0 30px 0;
     width: 300px;
     height: 100px;
   }
 
+  textarea:hover {
+    background-color:rgb(213, 236, 247);
+    transition: all 1s ease-out;
+  }
+
   input[type="radio"],
   input[type="checkbox"] {
     margin: 0 4px 8px 0;
+    background-color: #fcefd9;
   }
   
   input:focus {
     border: 2px solid black;
   }
 
+  input:hover {
+    background-color:rgb(155, 221, 254);
+    transition: all 1s ease-out;
+  }
+
   input[placeholder="Required"] {
     text-align: right;
     font-style: italic;
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Courier', sans-serif;
   }
   
   input[placeholder="Required"]:focus {
@@ -117,7 +135,6 @@
     width: 100%;
     height: 32px;
     border-radius: 2px;
-    color: #999;
   }
 
   option:first-of-type {
@@ -127,16 +144,22 @@
   button {
     padding: 19px 39px 18px 39px;
     color: #FFF;
-    background-color: #4bc970;
+    background: linear-gradient(360deg, transparent 1%, #4cf5fb);
     font-size: 18px;
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Courier', sans-serif;
     text-align: center;
     border-radius: 5px;
     width: 100%;
-    border: 1px solid #3ac162;
+    border: .5px solid #424a90;
     border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.01);
     margin-bottom: 10px;
+  }
+  
+  button:hover {
+    background:linear-gradient(360deg, transparent 1%, rgb(155, 221, 254));
+    transition: all 1s ease-out;
+    color: black;
   }
   
   input#html-news,
@@ -144,19 +167,22 @@
   input#javascript-news,
   input#html,
   input#plain-text {
-    height: 18px;
-    width: 18px;
+    height: 10px;
+    width: 10px;
     margin-right: 10px;
+    transform: scale(2);
   }
 
   fieldset {
     margin-bottom: 10px;
     padding: 0;
     border: none;
+    background:linear-gradient(to bottom, transparent 1%,black);
+    backdrop-filter: blur(3px);
   }
   
   legend {
-    font-size: 1.4em;
+    font-size: 1.35em;
     font-weight: bold;
     margin-bottom: 18px;
     width: 100%;
@@ -170,13 +196,6 @@
   label.light {
     font-weight: 300;
     display: inline;
-  }
-
-  p.copyright {
-    text-align: center;
-    color: gray;
-    font-style: italic;
-    font-size: 0.9em;
   }
   
   @media screen and (min-width: 768px) {
@@ -197,8 +216,14 @@
         width: 100%;
         display: block;
     }
+
     input#zip {
         width: 30%;
+    }
+
+    select[id="state"]:hover {
+      background-color:rgb(155, 221, 254);
+      transition: all 1s ease-out;
     }
 
     label {
